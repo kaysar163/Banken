@@ -15,6 +15,7 @@ class Account implements Serializable {
                 System.out.println("2. Sätt in pengar");
                 System.out.println("3. Visa saldo");
                 System.out.println("4. Logga ut");
+                System.out.println("5. Ange krypteringsalternativ"); // New option for encryption
                 int choice = scanner.nextInt();
 
                 if (choice == 1) {
@@ -35,6 +36,18 @@ class Account implements Serializable {
                     System.out.println("Aktuellt saldo: " + balance);
                 } else if (choice == 4) {
                     break;
+                } else if (choice == 5) {
+                    System.out.println("Ange krypteringsmetod (1 för AES, 2 för RSA):");
+                    int encryptionChoice = scanner.nextInt();
+                    if (encryptionChoice == 1) {
+                        // Call the method for AES encryption here
+                        System.out.println("Du valde AES-kryptering.");
+                    } else if (encryptionChoice == 2) {
+                        // Call the method for RSA encryption here
+                        System.out.println("Du valde RSA-kryptering.");
+                    } else {
+                        System.out.println("Ogiltigt val.");
+                    }
                 }
             }
         }

@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-class FileEncryptor {
-    public void encryptToFile(Object data, String filename) throws IOException {
+  class FileEncryptor {
+   public void encryptToFile(Object data, String filename) throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename))) {
             oos.writeObject(data);
         }
@@ -16,4 +16,4 @@ class FileEncryptor {
             return (T) ois.readObject();
         }
     }
-}
+}                                                                                                                       
